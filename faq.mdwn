@@ -19,6 +19,7 @@ related:
 - Generic git help can be found at <http://git-scm.com/book/>.
 - github.com specific help can be found at <https://help.github.com>.
 - A 15 minutes, interactive, git tutorial <http://try.github.com/levels/1/challenges/1>
+- A nice video about git <http://www.youtube.com/watch?v=ZDR433b0HJY>
 
 ## How do I subscribe to github?
 
