@@ -7,21 +7,34 @@ related:
  - { name: Topic Collector, link: https://cern.ch/cmsgit/cmsgit }
  - { name: Feedback, link: https://github.com/cms-sw/cmssw/issues/new }
 ---
-This is a test repository to study the feasibility of maintaing CMSSW on github.
 
-# Migration strategy
+CMS is migrating the repository of its Offline Experiment Software (CMSSW) to
+git and github.
 
-Migration from CVS repository uses [cvs2git][] via a custom script which
-enforces some of the migration choices detailed below. The script itself at the
-moment needs to have access to the CVSROOT of CMSSW repository.
-The following choices where done when migrating.
+# Migration schedule:
 
-* Migrate the full per file-history.
-* Migrate tags only for an handful of releases, in particular `CMSSW_5_3_9`,
-  `CMSSW_6_1_1` and `CMSSW_6_2_0_pre3`.
-* `data` directories are not migrated.
-* `docs` directories are not migrated.
-* Old subsystems like `Iguana`, `IgProf` (which is now maintained in a separate
-  repository [igprof](http://www.igprof.org)) and `ISpy` are not migrated.
+## `CMSSW_7_0_X`
+
+On **June 24th**, in line with what should be `CMSSW_6_2_0_pre8`, `CMSSW_7_0_X`
+branch will open in GitHub.
+
+The current, test, [cms-sw/cmssw][http://github.com/cms-sw/cmssw] repository
+will be scrapped and started from scratch! **You'll need to do the same for your
+forks!**
+
+## `CMSSW_6_2_X`, `CMSSW_5_3_X`, `CMSSW_4_4_X`, `CMSSW_4_1_X`, SLHC releases.
+
+On the day `CMSSW_6_2_0` is released, tentatively July 1st, we will open
+branches in git for all the required stable release queue. 
+
+CVS access to CMSSW repository will be shut down at that point.
+
+## `UserCode`
+
+You will be able to commit to the UserCode repository until the end of July, in
+order to avoid disruption for the summer conferences.
+
+Instructions on how to migrate CMSSW releases can be found
+[here](http://cms-sw.github.io/cmssw/usercode-faq.html).
 
 [cvs2git]: http://cvs2svn.tigris.org/cvs2git.html
