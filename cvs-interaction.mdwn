@@ -2,8 +2,7 @@
 title: CMS Offline Software
 layout: default
 related:
- - { name: Home, link: index.html }
- - { name: Project, link: https://github.com/cms-sw/cmssw }
+ - { name: Project page, link: https://github.com/cms-sw/cmssw }
  - { name: Topic Collector, link: https://cern.ch/cmsgit/cmsgit }
  - { name: Feedback, link: https://github.com/cms-sw/cmssw/issues/new }
 ---
@@ -34,7 +33,7 @@ In order to simplify import from CVS, we also provide a wrapper script: `git
 cms-cvs-history`, which can be used to navigate and possibly import per package
 tags into your favorite CMSSW git branch.
 
-## Listing the tags available in CVS for a given package.
+### Listing the tags available in CVS for a given package.
 
     git cms-cvs-history tags <package>
 
@@ -42,7 +41,7 @@ where `<package>` is in the usual form `Subsystem/Package`, e.g.:
 
     git cms-cvs-history tags Configuration/Generator
 
-## Importing a given tag for a given package
+### Importing a given tag for a given package
 
     git cms-cvs-history import <tag> <package>
 
@@ -50,13 +49,13 @@ E.g.:
 
     git cms-cvs-history import V01-15-12 Configuration/Generator
 
-## Diffing two tags:
+### Diffing two tags:
 
     git cms-cvs-history diff <cvs-tag1>..<cvs-tag2> <package>
 
 equivalent to `cvs diff -r <cvs-tag1> -r <cvs-tag2> <package>`.
 
-## Package log:
+### Package log:
 
     git cms-cvs-history log <branch> <package>
 
