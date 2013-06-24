@@ -11,7 +11,7 @@ related:
 * auto-gen TOC:
 {:toc}
 
-## How do I checkout the full CMSSW repository locally?
+### How do I checkout the full CMSSW repository locally?
 
 To checkout the full CMSSW repository locally you can do:
 
@@ -32,7 +32,7 @@ command.
 
 [git-clone-repo]: http://git-scm.com/book/en/Git-Basics-Getting-a-Git-Repository#Cloning-an-Existing-Repository
 
-## How do I browse / search the code?
+### How do I browse / search the code?
 
 The source code for the official CMSSW repository can be found in the main
 github page for CMSSW: <https://github.com/cms-sw/cmssw>.
@@ -69,7 +69,7 @@ which will give you:
 
 for more information about `git grep` click [here](http://git-scm.com/docs/git-grep).
 
-## How do I tell who is responsible for a given change?
+### How do I tell who is responsible for a given change?
 
 Let's say you want to find out who is responsible for a given
 change in `FWCore/Framework/BuildFile.xml`. If you are happy with using
@@ -163,7 +163,7 @@ which returns:
         boost::shared_ptr<ParameterSet> parameterSet = processDesc->getProcessPSet();
         //std::cerr << parameterSet->dump() << std::endl;
 
-## Downloading from github is painfully slow, how can I improve the situation?
+### Downloading from github is painfully slow, how can I improve the situation?
 
 If you have a local mirror of CMSSW repository at your site / university you
 can use it by setting the `CMSSW_MIRROR` environment variable. E.g.:
@@ -185,7 +185,7 @@ in particular people working on lxplus can use:
 
     export CMSSW_GIT_REFERENCE=/afs/cern.ch/cms/git-cmssw-mirror/cmssw.git
 
-## How do I setup a local mirror?
+### How do I setup a local mirror?
 
 Git allows you to mirror a repository by doing:
 
@@ -197,7 +197,7 @@ Done that you can update the mirror via:
     cd $CMSSW_MIRROR_PATH
     git remote update
 
-## How do I collapse multiple commits into one?
+### How do I collapse multiple commits into one?
 
 A very common pattern when developing a feature with git is to commit very
 often, to keep track of even small set of changes and once one is happy with
@@ -246,7 +246,7 @@ particular once you are familiar with the concept you might want to look at
 more flexibility when you want to do more that simply merge a set of commits
 into one.
 
-## How do I ask a question?
+### How do I ask a question?
 
 If you have more questions about git and CMSSW on git, please use [this
 form][new-faq-form].
