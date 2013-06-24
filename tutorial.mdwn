@@ -6,7 +6,8 @@ related:
  - { name: Topic Collector, link: https://cern.ch/cmsgit/cmsgit }
  - { name: Feedback, link: https://github.com/cms-sw/cmssw/issues/new }
 ---
-## Adding a new bugfix / feature to CMSSW.
+
+## Tutorial: proposing changes to CMSSW.
 
 This tutorial wil guide you step to step from an empty directory to 
 a new feature being proposed in the CMS Topic Collector. For more general
@@ -36,9 +37,12 @@ The src directory is populated with just what we asked for (here
 > available branches via `git branch`.
 
     > git branch
-    * from-CMSSW_6_2_0_tutorial
+    * from-CMSSW_6_2_0_TUTORIAL
 
 > the `*` next to the branch name will tell you which one is the current one.
+> The name of the branch is meant to show you the tag which was used as a base
+> for the branch.
+
 
 ### Create a new topic branch and move to it:
 
@@ -52,7 +56,7 @@ The src directory is populated with just what we asked for (here
 > For example you could call your branch "new-hlt-menu-XYZ",
 > "bugfix-for-clustering", etc. Compared to CVS, `git checkout <branch>` means 
 > *"Make `branch` the current `branch` in the local work area"*.
-> The -b option is needed to create the branch if it does not exists.
+> The `-b` option is needed to create the branch if it does not exists.
 
 
 ### Modify sources and commit.
@@ -60,8 +64,8 @@ The src directory is populated with just what we asked for (here
     > cd Tutorial/Test
     > nedit bin/BuildFile.xml
     > git commit -m "Test feature" bin/BuildFile.xml
-    [CMSSW_6_2_X b043f10] Test feature.
-     1 files changed, 1 insertions(+), 0 deletions(-)
+    [my-new-feature dc306ba] Test feature
+     1 file changed, 1 insertion(+)
 
 > You have just committed to your **LOCAL** copy of the repository.
 
@@ -69,8 +73,8 @@ The src directory is populated with just what we asked for (here
 
 >Git supports multiple remote repository. In particular we will use:
 >
->- *official-cmssw*: read only authoritative CMSSW sources 
 >- *my-cmssw*: your personal repository, used to propose changes
+>- *official-cmssw*: read only authoritative CMSSW sources 
 >
 >To show what remotes are available you can use `git remote show`:
 
@@ -89,18 +93,51 @@ The src directory is populated with just what we asked for (here
 
 ### Push all your work to your private github repository
 
-    > git push my-cmssw
+> Your private repository can be found at:
+
+    https://github.com/<your-username>/cmssw
+
+> If you have not set it up yet, do so now by [clicking
+> here](https://github.com/cms-sw/cmssw/fork). You can publish branches to it
+> by doing:
+
+    > git push my-cmssw <branch-name>
+
+> in this case:
+
+    > git push my-cmssw my-new-feature
 
 > **You need to PUSH YOUR changes** to make them available to others in your
-> private repository.
+> private repository. Notice you only need to specify the name of the branch once
+> then git will remember about it and you can push your new developments by
+> simply doing `git push my-cmssw`.
 
-### Go to your private repository and do a pull request
 
-![Pull request GUI](images/pull-request.png)
+### Do a pull request
 
 > A **pull request** is a request to merge a given addition in your local repository
 > to a branch in the official CMSSW repository.  **Think of it as publishing a
-> tagset in Tag Collector.**
+> tagset in Tag Collector.** To start one click on the "Pull request" button which
+> find on your personal repository.
+
+![Pull request](images/pull-request.png)
+
+### Select the topic branch which you want to propose and its target.
+
+> The GUI for doing "Pull requests" looks like below:
+
+![Pull request](images/pull-request-gui.png)
+
+> First of all, select the "head branch" i.e. your addition on to of the official CMSSW.
+
+![Pull request](images/head-branch.png)
+
+> Then select the "base branch", i.e. the one to which you want to have your changes merged.
+
+![Pull requests GUI](images/base-branch.png)
+
+> *write a sensible comment* just like you used to do for the publishing of
+> tagsets and click on Send Pull Request.
 
 ### Go to the Topic Collector and check approval status
 
