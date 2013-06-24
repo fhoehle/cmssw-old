@@ -8,6 +8,8 @@ related:
  - { name: Feedback, link: https://github.com/cms-sw/cmssw/issues/new }
 ---
 
+# Welcome to CMSSW on GitHub pages
+
 CMS is migrating the repository of its Offline Experiment Software (CMSSW) to
 git and github.
 
