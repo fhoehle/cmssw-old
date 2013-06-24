@@ -111,18 +111,20 @@ open requests and their approval status.
 
 Simply merge the release branch into your topic branch:
 
-    git checkout topic
-    git fetch cmssw-main CMSSW_6_2_X
-    git merge cmssw-main/CMSSW_6_2_X
+    git checkout new-feature
+    git fetch official-cmssw
+    git merge official-cmssw/CMSSW_6_2_X
 
 or in one command:
 
-    git pull cmssw-main CMSSW_6_2_X
+    git pull official-cmssw CMSSW_6_2_X
 
-assuming you are on the `topic` branch already. 
+assuming you are on the `new-feature` branch already. 
 
 For more information about merging branching read
 [here](http://git-scm.com/book/en/Git-Branching-Basic-Branching-and-Merging).
+
+You can also have a look at the CMS git tutorial found [here](tutorial).
 
 ## What about UserCode?
 
