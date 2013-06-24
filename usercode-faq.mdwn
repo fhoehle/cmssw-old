@@ -2,8 +2,7 @@
 title: CMS Offline Software
 layout: default
 related:
- - { name: Home, link: index.html }
- - { name: Project, link: https://github.com/cms-sw/cmssw }
+ - { name: Project page, link: https://github.com/cms-sw/cmssw }
  - { name: Topic Collector, link: https://cern.ch/cmsgit/cmsgit}
  - { name: Feedback, link: https://github.com/cms-sw/cmssw/issues/new }
 ---
@@ -12,7 +11,7 @@ related:
 * auto-gen TOC:
 {:toc}
 
-## What is happening?
+### What is happening?
 
 Just like CMSSW, UserCode repositories will have to migrate away from
 `CVS`. The deadline for the migration is the 31st of July, i.e. after the
@@ -23,7 +22,7 @@ UserCode areas will **not** be centrally migrated, however we provide scripts
 and assistance to migrate them to github, reccomended, or the git / svn service
 of your preference.
 
-## Can I stick with CVS?
+### Can I stick with CVS?
 
 Unfortunately no. CERN/IT wants to shut down the CVS service since years and
 while we have been able to postpone it so far to avoid disruption of Higgs
@@ -31,26 +30,26 @@ discovery, the long shutdown removes that excuse. This is however a perfect
 time to improve how way of working and get rid of all the complications that
 came from using an obsolete VCS like CVS.
 
-## Can't we postpone it further?
+### Can't we postpone it further?
 
 No.
 
-## Really?
+### Really?
 
 Yes.
 
-## Ok...
+### Ok...
 
 Thanks for understanding. We will try to help as much as we possibly can during
 your transition.
 
-## Where should I host my repository?
+### Where should I host my repository?
 
 You are free of hosting your repository on any git / SVN hosting site you
 prefer, however given we will use <http://github.com> for the CMSSW code, it's
 probably a good idea if you stick with it too.
 
-## How do I migrate to github?
+### How do I migrate to github?
 
 Assuming you already have your own account on github (if not follow the
 instructions
@@ -105,24 +104,24 @@ there.
 
 Further information about cvs2git can be found at <http://cvs2svn.tigris.org/cvs2git.html>.
 
-## I need a private repository!
+### I need a private repository!
 
 First of all, keep in mind that your UserCode area was never private, so you
 are asking for something new. If you really want to have a private repository you can 
 use CERN/IT provided service at <https://cernforge.cern.ch/cernforge/>. Simply adapt
 the above mentioned `MY_REMOTE` variable.
 
-## Do you have any more in-depth FAQs?
+### Do you have any more in-depth FAQs?
 
 Yes, please look at the [Standard git FAQ](faq) or at the [Advanced
 Usage](advanced-usage) section.
 
-## How do I prevent people from committing to the old CVS area?
+### How do I prevent people from committing to the old CVS area?
 
 Please [leave us a comment][new-faq-form] and we will make the CVS repository
 read-only.
 
-## I need to collaborate with some fellow physicists!
+### I need to collaborate with some fellow physicists!
 
 GitHub has to possible ways of dealing with this.
 
@@ -139,11 +138,11 @@ GitHub has to possible ways of dealing with this.
   commit rights.  To learn more about organizations please have a look at
   <https://github.com/blog/674-introducing-organizations>.
 
-## Does this affect physics notes?
+### Does this affect physics notes?
 
 No. They are hosted in SVN and this will continue to be the case.
 
-## I need to checkout subdirectories in a standalone manner.
+### I need to checkout subdirectories in a standalone manner.
 
 At first loop approximation git checks out the full repository, there are
 however a few workarounds to this which can help.
@@ -168,7 +167,7 @@ checkout](http://www.kernel.org/pub/software/scm/git/docs/git-read-tree.html#_sp
 which will hide unneeded bits, in particular you can look at what we plan to do
 in in CMSSW, via [git-addpkg](http://cms-sw.github.io/cmssw/git-addpkg).
 
-## How do I ask a question?
+### How do I ask a question?
 
 If you have more questions about git and CMSSW on git, please use [this
 form][new-faq-form].

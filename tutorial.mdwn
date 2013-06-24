@@ -2,8 +2,7 @@
 title: CMS Offline Software
 layout: default
 related:
- - { name: Home, link: index.html }
- - { name: Project, link: https://github.com/cms-sw/cmssw }
+ - { name: Project page, link: https://github.com/cms-sw/cmssw }
  - { name: Topic Collector, link: https://cern.ch/cmsgit/cmsgit }
  - { name: Feedback, link: https://github.com/cms-sw/cmssw/issues/new }
 ---
@@ -11,7 +10,7 @@ related:
 
 This tutorial wil guide you step to step from an empty directory to 
 a new feature being proposed in the CMS Topic Collector. For more general
-questions please have a look at the [FAQ][faq] pages.
+questions please have a look at the [FAQ](faq.html) pages.
 
 ### Create a CMSSW area
 
@@ -77,5 +76,13 @@ repository](https://github.com/cms-sw/cmssw) will also appear in the
 
 You need to *PUSH YOUR changes* to make them available to others in your
 private repository.
+
+### Go to your private repository and do a pull request
+
+![Pull request GUI](images/pull-request.png)
+
+> A **pull request** is a request to merge a given addition in your local repository
+> to a branch in the official CMSSW repository.  **Think of it as publishing a
+> tagset in Tag Collector.**
 
 [topic-collector]: https://cern.ch/cmsgit/cmsgit
