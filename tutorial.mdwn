@@ -142,7 +142,9 @@ The src directory is populated with just what we asked for (here
 ### Go to the Topic Collector and check approval status
 
 > Pull requests get automatically tracked in the [CMS Topic
-> Collector][topic-collector], just like tagsets where tracked in the CMS topic
+> Collector][topic-collector], just like tagsets were tracked in the CMS topic
 > collector.
+
+![Topic Collector](images/topic-collector.png)
 
 [topic-collector]: https://cern.ch/cmsgit/cmsgit
