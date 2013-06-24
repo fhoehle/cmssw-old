@@ -18,7 +18,7 @@ questions please have a look at the [FAQ](faq.html) pages.
     > cd CMSSW_6_2_0_pre7/src
     > cmsenv
 
-### Checkout a few packages using git-cms-addpkg
+### Checkout a few packages using git cms-addpkg
 
 `git cms-addpkg` behaves like the old addpkg. 
 The src directory is populated with just what we asked for (here
@@ -53,8 +53,10 @@ The src directory is populated with just what we asked for (here
 ### Show remote repositories
 
 >Git supports multiple remote repository. In particular we will use:
+>
 >- *official-cmssw*: read only authoritative CMSSW sources 
 >- *my-cmssw*: your personal repository, used to propose changes
+>
 >To show what remotes are available you can use `git remote show`:
 
     > git remote show
@@ -65,17 +67,17 @@ The src directory is populated with just what we asked for (here
 >- Fetch official sources from `official-cmssw`.
 >- Create a feature branch and add your additions on top.
 >- Create a [Pull Request](https://help.github.com/articles/using-pull-requests).
-
-Each pull request you do to the [official CMSSW
-repository](https://github.com/cms-sw/cmssw) will also appear in the 
-[CMS Topic Collector][topic-collector], together with the approval information.
+>
+> Each pull request you do to the [official CMSSW
+> repository](https://github.com/cms-sw/cmssw) will also appear in the 
+> [CMS Topic Collector][topic-collector], together with the approval information.
 
 ### Push all your work to your private github repository
 
     > git push my-cmssw
 
-You need to *PUSH YOUR changes* to make them available to others in your
-private repository.
+> **You need to PUSH YOUR changes** to make them available to others in your
+> private repository.
 
 ### Go to your private repository and do a pull request
 
@@ -84,5 +86,11 @@ private repository.
 > A **pull request** is a request to merge a given addition in your local repository
 > to a branch in the official CMSSW repository.  **Think of it as publishing a
 > tagset in Tag Collector.**
+
+### Go to the Topic Collector and check approval status
+
+> Pull requests get automatically tracked in the [CMS Topic
+> Collector][topic-collector], just like tagsets where tracked in the CMS topic
+> collector.
 
 [topic-collector]: https://cern.ch/cmsgit/cmsgit
