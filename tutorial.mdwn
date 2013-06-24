@@ -1,0 +1,68 @@
+---
+title: CMS Offline Software
+layout: default
+related:
+ - { name: Home, link: index.html }
+ - { name: Project, link: https://github.com/cms-sw/cmssw }
+ - { name: Topic Collector, link: https://cern.ch/cmsgit/cmsgit }
+ - { name: Feedback, link: https://github.com/cms-sw/cmssw/issues/new }
+---
+## Adding a new bugfix / feature to CMSSW.
+
+This tutorial wil guide you step to step from an empty directory to 
+a new feature being proposed in the CMS Topic Collector. For more general
+questions please have a look at the [FAQ][faq] pages.
+
+### Create a CMSSW area
+
+    > scram project CMSSW_6_2_0_pre7
+    > cd CMSSW_6_2_0_pre7/src
+    > cmsenv
+
+### Checkout a few packages using git-cms-addpkg
+
+    > git cms-addpkg Tutorial/Test CMSSW_6_2_0_TUTORIAL
+    > ls Tutorial/Test/bin
+    BuildFile.xml
+    > git branch
+    from-CMSSW_6_2_0_tutorial
+
+>Notice we had to provide the `CMSSW_6_2_0_TUTORIAL` tag explicitly because
+>there is no real release called like that. By default it would simply use the
+>current release name (e.g. CMSSW_6_2_0_pre7).
+
+### Create a new topic branch and move to it:
+
+    > git checkout -b my-new-feature
+    Switched to a new branch 'my-new-feature'
+
+`git cms-addpkg` behaves like the old addpkg. 
+The src directory is populated with just what we asked for (here
+`Tutorial/Test`).
+
+### Modify sources:
+
+    > cd Tutorial/Test
+    > nedit bin/BuildFile.xml
+    > git commit -m “Test feature” bin/BuildFile.xml
+    [CMSSW_6_2_X b043f10] Test feature.
+     1 files changed, 1 insertions(+), 0 deletions(-)
+
+> You have just committed to your *LOCAL* copy of the repository.
+
+### Show remote repositories
+
+    > git remote show
+    official-cmssw
+    my-cmssw
+
+>Git supports multiple remote repository. In particular we will use:
+>- *official-cmssw*: read only authoritative CMSSW sources 
+>- *my-cmssw*: your personal repository, used to propose changes
+
+### Push all your work to your private github repository
+
+    > git push my-cmssw
+
+You need to *PUSH YOUR changes* to make them available to others in your
+private repository.

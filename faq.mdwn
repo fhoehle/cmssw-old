@@ -45,19 +45,11 @@ connect to your github account, simply click on "Authorize app".
 
 ![signup button](images/github-authorize.png)
 
-Once you are done, you might want to execute the following commands to add easy
-to remember names for some CMS specific things:
+Once you are done you should also setup your personal information:
 
-    git config --global remote.cmssw-main.url git@github.com:cms-sw/cmssw.git 
-    git config --global remote.cmssw-main-ro.url https://github.com/cms-sw/cmssw.git
-    git config --global core.sparsecheckout true
-
-You should also setup your personal information, so that when you commit your real name,
-and not your username will be used:
-
-    git config --global user.name Enrico Fermi
-
-*NOTE:* Should we add this to the default CMS environment?
+    git config --global user.name <First Name> <Last Name>
+    git config --global user.email <Your-Email-Address>
+    git config --global user.github <Your-Just-Created-GitHub-Account>
 
 [cms-topic-collector]: https://cern.ch/cmsgit/cmsgit
 
@@ -67,52 +59,44 @@ and not your username will be used:
 
 If you are in a CMSSW area (remember to do `cmsenv`) you can simply use:
   
-    git addpkg <package-name>
+    git cms-addpkg <package-name>
 
 once you have developments you can checkout dependent packages by doing.
 
-    git checkdeps
+    git cms-checkdeps
 
-[Read more.](git-addpkg)
+[Read more.](git-cms-addpkg)
 
 ## How do I develop a new feature using git?
 
 First of all you need to fork cmssw to your own personal repository. This
 repository will be used to hold all your incomplete developments. 
 
-**NOTE**: all this can be automated the first time people connect to a yet to be
-  introduced "Topic Collector".
-
-Once you have done that, add a shortcut to it.
-
-    GITHUB_USER=<your github username>
-    git config --global remote.cmssw-me.url git@github.com:$GITHUB_USER/cmssw.git 
-
-In your working area checkout a few packages you want to modify via
-`git-addpkg`. When you are ready to start developing create a new topic branch
+In your working area checkout a few packages you want to modify via `git
+cms-addpkg`. When you are ready to start developing create a new topic branch
 to hold your developments, e.g.:
 
-    git checkout -b for/CMSSW_6_2_X/my-topic-branch
+    git checkout -b my-new-feature
 
-Notice you'll be able to add more packages afterwards, so do not worry if you don't
-have all of them right ahead.
+Notice you'll be able to add more packages afterwards, so do not worry if you
+don't have all of them right ahead.
 
 Once you are happy with your changes, push them to your private repository on
 github, e.g.:
 
-    git push cmssw-me for/CMSSW_6_2_X/my-topic-branch
+    git push my-cmssw
 
-You can do the above multiple times, whenever you have updated your development.
-Whenever you are happy, open a pull request to merge your topic branch into the
-official repository.
+You can do the above multiple times, whenever you have updated your
+development.  Whenever you are happy, open a pull request to merge your topic
+branch into the official repository.
 
 This can be done by going to [CMS Topic Collector][cms-topic-collector] and by
 clicking on the "Create new pull request for ...".
 
 ![Create pull request](images/create-pull-request.png) 
 
-This will redirect you to the github equivalent of the "tagset publishing"  page in the old tag collector
-("pull request creation" in git jargon):
+This will redirect you to the github equivalent of the "tagset publishing"
+page in the old tag collector ("pull request creation" in git jargon):
 
 ![Publish pull request](images/publish-branch.png) 
 
