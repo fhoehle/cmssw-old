@@ -65,7 +65,7 @@ once you have developments you can checkout dependent packages by doing.
 
     git cms-checkdeps
 
-[To learn more about git cms-addpkage click here](git-cms-addpkg).
+[To learn more about git cms-addpkg click here](git-cms-addpkg.html).
 
 You can also find a complete tutorial [here](tutorial.html).
 
