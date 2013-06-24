@@ -21,6 +21,10 @@ questions please have a look at the [FAQ][faq] pages.
 
 ### Checkout a few packages using git-cms-addpkg
 
+`git cms-addpkg` behaves like the old addpkg. 
+The src directory is populated with just what we asked for (here
+`Tutorial/Test`).
+
     > git cms-addpkg Tutorial/Test CMSSW_6_2_0_TUTORIAL
     > ls Tutorial/Test/bin
     BuildFile.xml
@@ -36,29 +40,36 @@ questions please have a look at the [FAQ][faq] pages.
     > git checkout -b my-new-feature
     Switched to a new branch 'my-new-feature'
 
-`git cms-addpkg` behaves like the old addpkg. 
-The src directory is populated with just what we asked for (here
-`Tutorial/Test`).
 
-### Modify sources:
+### Modify sources and commit.
 
     > cd Tutorial/Test
     > nedit bin/BuildFile.xml
-    > git commit -m “Test feature” bin/BuildFile.xml
+    > git commit -m "Test feature" bin/BuildFile.xml
     [CMSSW_6_2_X b043f10] Test feature.
      1 files changed, 1 insertions(+), 0 deletions(-)
 
-> You have just committed to your *LOCAL* copy of the repository.
+> You have just committed to your **LOCAL** copy of the repository.
 
 ### Show remote repositories
+
+>Git supports multiple remote repository. In particular we will use:
+>- *official-cmssw*: read only authoritative CMSSW sources 
+>- *my-cmssw*: your personal repository, used to propose changes
+>To show what remotes are available you can use `git remote show`:
 
     > git remote show
     official-cmssw
     my-cmssw
 
->Git supports multiple remote repository. In particular we will use:
->- *official-cmssw*: read only authoritative CMSSW sources 
->- *my-cmssw*: your personal repository, used to propose changes
+>The general workflow for development will be the following:
+>- Fetch official sources from `official-cmssw`.
+>- Create a feature branch and add your additions on top.
+>- Create a [Pull Request](https://help.github.com/articles/using-pull-requests).
+
+Each pull request you do to the [official CMSSW
+repository](https://github.com/cms-sw/cmssw) will also appear in the 
+[CMS Topic Collector][topic-collector], together with the approval information.
 
 ### Push all your work to your private github repository
 
@@ -66,3 +77,5 @@ The src directory is populated with just what we asked for (here
 
 You need to *PUSH YOUR changes* to make them available to others in your
 private repository.
+
+[topic-collector]: https://cern.ch/cmsgit/cmsgit
