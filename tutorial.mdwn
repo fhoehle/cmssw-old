@@ -14,6 +14,8 @@ questions please have a look at the [FAQ](faq.html) pages.
 
 ### Create a CMSSW area
 
+> Set up the work area just like you used to.
+
     > scram project CMSSW_6_2_0_pre7
     > cd CMSSW_6_2_0_pre7/src
     > cmsenv
@@ -36,8 +38,15 @@ The src directory is populated with just what we asked for (here
 
 ### Create a new topic branch and move to it:
 
+> In order to simplify your workflow, the best thing to do is to branch
+> immediately and assign a mnemonic name to your newly created branch, so that
+> you can track what you were doing in an easier way.
+
     > git checkout -b my-new-feature
     Switched to a new branch 'my-new-feature'
+
+> For example you could call your branch "new-hlt-menu-XYZ",
+> "bugfix-for-clustering", etc.
 
 
 ### Modify sources and commit.
