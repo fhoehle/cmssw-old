@@ -8,13 +8,15 @@ related:
  - { name: Feedback, link: https://github.com/cms-sw/cmssw/issues/new }
 ---
 
-## Sparse checkout does not work.
+# Troubleshooting git
+
+### Sparse checkout does not work.
 
 Apparently some university deployed a non working `git` 1.7.4 client. This
 results in sparse checkout misbehavior. Using 1.7.4.1 or later seems to fix the
 issue.
 
-## Missing public key.
+### Missing public key.
 
 In case you get the following message:
 
