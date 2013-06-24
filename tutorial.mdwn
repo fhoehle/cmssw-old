@@ -44,7 +44,7 @@ The src directory is populated with just what we asked for (here
 
     > cd Tutorial/Test
     > nedit bin/BuildFile.xml
-    > git commit -m “Test feature” bin/BuildFile.xml
+    > git commit -m "Test feature" bin/BuildFile.xml
     [CMSSW_6_2_X b043f10] Test feature.
      1 files changed, 1 insertions(+), 0 deletions(-)
 
