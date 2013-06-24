@@ -14,6 +14,8 @@ questions please have a look at the [FAQ](faq.html) pages.
 
 ### Create a CMSSW area
 
+> Set up the work area just like you used to.
+
     > scram project CMSSW_6_2_0_pre7
     > cd CMSSW_6_2_0_pre7/src
     > cmsenv
@@ -27,17 +29,30 @@ The src directory is populated with just what we asked for (here
     > git cms-addpkg Tutorial/Test CMSSW_6_2_0_TUTORIAL
     > ls Tutorial/Test/bin
     BuildFile.xml
-    > git branch
-    from-CMSSW_6_2_0_tutorial
 
 >Notice we had to provide the `CMSSW_6_2_0_TUTORIAL` tag explicitly because
 >there is no real release called like that. By default it would simply use the
->current release name (e.g. CMSSW_6_2_0_pre7).
+>current release name (e.g. CMSSW_6_2_0_pre7). At any point you can list the
+> available branches via `git branch`.
+
+    > git branch
+    * from-CMSSW_6_2_0_tutorial
+
+> the `*` next to the branch name will tell you which one is the current one.
 
 ### Create a new topic branch and move to it:
 
+> In order to simplify your workflow, the best thing to do is to branch
+> immediately and assign a mnemonic name to your newly created branch, so that
+> you can track what you were doing in an easier way.
+
     > git checkout -b my-new-feature
     Switched to a new branch 'my-new-feature'
+
+> For example you could call your branch "new-hlt-menu-XYZ",
+> "bugfix-for-clustering", etc. Compared to CVS, `git checkout <branch>` means 
+> *"Make `branch` the current `branch` in the local work area"*.
+> The -b option is needed to create the branch if it does not exists.
 
 
 ### Modify sources and commit.
