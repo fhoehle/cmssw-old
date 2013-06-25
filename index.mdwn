@@ -16,8 +16,8 @@ git and github.
 
 ### CMSSW_7_0_X
 
-On **June 24th**, in line with what should be `CMSSW_6_2_0_pre8`, `CMSSW_7_0_X`
-branch will open in GitHub.
+On **June 24th** (*updated: postponed to 26th*), in line with what should be
+`CMSSW_6_2_0_pre8`, `CMSSW_7_0_X` branch will open in GitHub.
 
 The current, test, [cms-sw/cmssw](http://github.com/cms-sw/cmssw) repository
 will be scrapped and started from scratch! **You'll need to do the same for your
